@@ -43,9 +43,17 @@ check_bashrc(){
     if ! grep -q "__git_ps1" "$BASHRC"; then
         changes_needed+=("Add Git completion")
     fi
-}
+
+#Check if Powerline is added
+    if ! grep -q "Powerline" "$BASHRC"; then
+        changes_needed+=("Add Powerline")
+    fi
+  }
+
 backup_bashrc(){
+
 # Backup if changes_needed not empty
+
 if [ ${#changes_needed[@]} -gt 0 ] && [ ! -f "$BACKUP" ]; then
     echo "Backing up .bashrc to $BACKUP"
     cp "$BASHRC" "$BACKUP"
@@ -78,6 +86,7 @@ apply_changes(){
                 cat << 'EOF' >> "$BASHRC"
 
 # Ensure Git completion is available
+
 if [ -f /usr/share/bash-completion/completions/git ]; then
     . /usr/share/bash-completion/completions/git
 fi
@@ -87,9 +96,20 @@ PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 "
 EOF
                 echo "Git completion added. Run 'source ~/.bashrc' to apply changes."
                 ;;
+             "Add Powerline")
+                cat << 'EOF' >> "$BASHRC"
+# Enable Powerline for Bash
+
+if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
+    source /usr/share/powerline/bindings/bash/powerline.sh
+fi
+EOF
+                echo "Powerline added. Run 'source ~/.bashrc' to apply changes."
+                ;;                
         esac
     done
 }
+
 update_bashrc_file(){
     check_bashrc
     backup_bashrc

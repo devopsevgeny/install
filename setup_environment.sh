@@ -30,7 +30,7 @@ check_no_root() {
 
 YUM_PACKAGES=("git" "vim" "vscodium")
 
-APT_PACKAGES=("git" "vim" "codium" "ca-certificates" "apt-transport-https" "lsb-release" "gnupg" "neovim" "bash-completion" "netcat-traditional" "gcc" "make" "cmake" "docker.io" "docker-compose" "kubectl" "helm" "python3-pip" "google-cloud-sdk" "terraform" "ansible" "cloud-init" "zsh" "openssl" "nmap" "wireshark" "tcpdump" "traceroute" "jq" "yq" "dbeaver-ce" "mysql-client" "postgresql-client" "redis-tools" "mongodb-database-tools" "sqlite3" "jmeter" "k6" "htop" "iotop" "iftop" "atop" "sysstat" "flatpak" "pipx" "unzip" "tar" "rsync" "vagrant" "virtualbox" "libvirt-clients" "libvirt-daemon-system" "tmux" "screen"
+APT_PACKAGES=("git" "vim" "codium" "fonts-powerline" "ca-certificates" "apt-transport-https" "lsb-release" "gnupg" "neovim" "bash-completion" "netcat-traditional" "gcc" "make" "cmake" "docker.io" "docker-compose" "kubectl" "helm" "python3-pip" "google-cloud-sdk" "terraform" "ansible" "cloud-init" "zsh" "openssl" "nmap" "wireshark" "tcpdump" "traceroute" "jq" "yq" "dbeaver-ce" "mysql-client" "postgresql-client" "redis-tools" "mongodb-database-tools" "sqlite3" "jmeter" "k6" "htop" "iotop" "iftop" "atop" "sysstat" "flatpak" "pipx" "unzip" "tar" "rsync" "vagrant" "virtualbox" "libvirt-clients" "libvirt-daemon-system" "tmux" "screen"
 )
 
 

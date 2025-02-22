@@ -22,10 +22,12 @@ source "$WORKDIR/bin/backup.sh
 
 # Function to check for root privileges
 check_no_root() {
-  if [[ $EUID == "0" ]] || [[ $UID == "0" ]]; then
-    echo "Do not use root user or sudo "
-    exit 1
-  fi
+    if [[ $EUID == "0" ]] || [[ $UID == "0" ]]; then
+        echo "Do not use root user or sudo "
+        exit 1
+    else
+        sudo -v
+    fi
 
 }
 
@@ -101,3 +103,4 @@ install_packages
 update_bashrc_file
 install_azure_cli
 install_minicube
+backup

@@ -18,7 +18,8 @@ source "$WORKDIR/bin/awscli.sh"
 source "$WORKDIR/bin/addrepos.sh"
 source "$WORKDIR/bin/update_bashrc.sh"
 source "$WORKDIR/bin/install_azure_cli.sh"
-source "$WORKDIR/bin/backup.sh
+source "$WORKDIR/bin/backup.sh"
+source "$WORKDIR/bin/vim_plugins.sh"
 
 # Function to check for root privileges
 check_no_root() {
@@ -103,4 +104,5 @@ install_packages
 update_bashrc_file
 install_azure_cli
 install_minicube
+setup_vim
 backup

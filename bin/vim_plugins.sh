@@ -59,9 +59,12 @@ install_plugins(){
 
     }
 
+# Pimp my VIM
 
+pipm_my_vim(){
+    create_vimrc
+    add_color_schemes
+    install_plugins
+}
 
-create_vimrc
-add_color_schemes
-install_plugins
-
+pipm_my_vim

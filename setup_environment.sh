@@ -18,6 +18,7 @@ source "$WORKDIR/bin/awscli.sh"
 source "$WORKDIR/bin/addrepos.sh"
 source "$WORKDIR/bin/update_bashrc.sh"
 source "$WORKDIR/bin/install_azure_cli.sh"
+source "$WORKDIR/bin/backup.sh
 
 # Function to check for root privileges
 check_no_root() {

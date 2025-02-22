@@ -53,5 +53,7 @@ backup_files(){
     fi
 }
 
+backup(){
 backupdir
 backup_files
+}

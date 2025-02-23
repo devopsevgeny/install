@@ -20,6 +20,7 @@ source "$WORKDIR/bin/update_bashrc.sh"
 source "$WORKDIR/bin/install_azure_cli.sh"
 source "$WORKDIR/bin/backup.sh"
 source "$WORKDIR/bin/vim_plugins.sh"
+source "$WORKDIR/bin/add_aliases.sh"
 
 # Function to check for root privileges
 check_no_root() {
@@ -106,3 +107,4 @@ install_azure_cli
 install_minicube
 setup_vim
 backup
+aliases

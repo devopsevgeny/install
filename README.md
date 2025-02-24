@@ -1,4 +1,4 @@
-# This project will help you to install your Linux desctop / laptop with many tools that will welp you in your dayly work.
+# This project will help you to install your Linux desctop / laptop with many tools that will welp you in your daily work.
 
 
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # -----------------------------------------------------
 # Script Name:    my_script.sh
-# Version:        1.24.0
+# Version:        1.24.5
 # Author:         Feigelman Evgeny
 # Date:           2025-02-12
 # Description:    This script will install most of needed packages, that you will use
@@ -40,7 +40,7 @@ APT_PACKAGES=("git" "vim" "codium" "fonts-powerline" "ca-certificates" "apt-tran
 
 
 # Function to determine OS type and set a global variable
-set_os_type() {
+ function set_os_type() {
     if [[ -f /etc/os-release ]]; then
         . /etc/os-release
         case "$ID" in
@@ -60,11 +60,11 @@ set_os_type() {
 }
 
 # Function to use the OS_TYPE variable
-print_os_type() {
+function print_os_type() {
     echo "The operating system is identified as: $OS_TYPE"
 }
 
-install_minicube(){
+function install_minikube(){
 # Minicube
 if [ ! -f /usr/local/bin/minikube ]; then
     curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
@@ -75,7 +75,7 @@ fi
 
 # Function to use the OS_TYPE variable
 
-install_packages(){
+function install_packages(){
     case $OS_TYPE in 
         Debian-based)
 	echo Installing pakages for $OS_TYPE OS.
@@ -85,7 +85,7 @@ install_packages(){
 	RHEL-based)
 	sudo yum update -y;
 	sudo yum install -y epel-release || sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E '%{rhel}').noarch.rpm;
-	sudo um update -y;
+	sudo yum update -y;
 	sudo yum install -y  "${YUM_PACKAGES[@]}"
 	echo Installing pakages for $OS_TYPE OS.
         ;;
@@ -104,7 +104,7 @@ function main() {
     install_packages
     update_bashrc_file
     install_azure_cli
-    install_minicube
+    install_minikube
     setup_vim
     backup
     aliases

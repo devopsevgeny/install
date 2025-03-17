@@ -15,7 +15,7 @@ This project is a modularized Bash-based setup tool designed to bootstrap a **co
 - 🛡 **Modifies .bashrc and adds useful aliases**
 - 📦 **Configures 3rd-party repositories (VSCodium, Helm, Kubernetes, HashiCorp, MongoDB, and more)**
 - 💾 **Backup utility for system and user configuration files**
-- 🛠 **Minikube installer**
+
 
 ---
 

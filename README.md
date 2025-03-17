@@ -63,11 +63,13 @@ chmod +x setup_environment.sh
 | Script                 | Description                                                      |
 | ---------------------- | ---------------------------------------------------------------- |
 | `setup_environment.sh` | Main orchestrator script to bootstrap the environment            |
+| `add_aliases.sh`       | Adds helpful aliases and `kubectl` autocompletion                |
 | `addrepos.sh`          | Adds external repositories like HashiCorp, Helm, etc.            |
+| `awscli.sh`            | Installs AWS cli                                                 |
+| `backup.sh`            | Creates a backup of important system and user configs            |
+| `install_azure.sh`     | Installs Azure CLI                                               |
 | `update_bashrc.sh`     | Updates `.bashrc` with Git completion, Powerline, history tuning |
 | `vim_plugins.sh`       | Installs `.vimrc`, color schemes, and essential Vim plugins      |
-| `add_aliases.sh`       | Adds helpful aliases and `kubectl` autocompletion                |
-| `backup.sh`            | Creates a backup of important system and user configs            |
 
 ---
 

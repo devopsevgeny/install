@@ -33,7 +33,7 @@ check_no_root() {
 
 }
 
-YUM_PACKAGES=("git" "vim" "vscodium")
+YUM_PACKAGES=("git" "vim" "codium" "fonts-powerline" "ca-certificates" "apt-transport-https" "lsb-release" "gnupg" "neovim" "bash-completion" "netcat-traditional" "gcc" "make" "cmake" "docker.io" "docker-compose" "kubectl" "helm" "python3-pip" "google-cloud-sdk" "terraform" "ansible" "cloud-init" "zsh" "openssl" "nmap" "wireshark" "tcpdump" "traceroute" "jq" "yq" "dbeaver-ce" "mysql-client" "postgresql-client" "redis-tools" "mongodb-database-tools" "sqlite3" "jmeter" "k6" "htop" "iotop" "iftop" "atop" "sysstat" "flatpak" "pipx" "unzip" "tar" "rsync" "vagrant" "virtualbox" "libvirt-clients" "libvirt-daemon-system" "tmux" "screen")
 
 APT_PACKAGES=("git" "vim" "codium" "fonts-powerline" "ca-certificates" "apt-transport-https" "lsb-release" "gnupg" "neovim" "bash-completion" "netcat-traditional" "gcc" "make" "cmake" "docker.io" "docker-compose" "kubectl" "helm" "python3-pip" "google-cloud-sdk" "terraform" "ansible" "cloud-init" "zsh" "openssl" "nmap" "wireshark" "tcpdump" "traceroute" "jq" "yq" "dbeaver-ce" "mysql-client" "postgresql-client" "redis-tools" "mongodb-database-tools" "sqlite3" "jmeter" "k6" "htop" "iotop" "iftop" "atop" "sysstat" "flatpak" "pipx" "unzip" "tar" "rsync" "vagrant" "virtualbox" "libvirt-clients" "libvirt-daemon-system" "tmux" "screen"
 )
@@ -95,16 +95,23 @@ install_packages(){
         ;;
     esac
 }
+function main() {
+    check_no_root
+    set_os_type
+    print_os_type
+    aws_cli
+    add_repos
+    install_packages
+    update_bashrc_file
+    install_azure_cli
+    install_minicube
+    setup_vim
+    backup
+    aliases
+}
 
-check_no_root
-set_os_type
-print_os_type
-aws_cli
-add_repos
-install_packages
-update_bashrc_file
-install_azure_cli
-install_minicube
-setup_vim
-backup
-aliases
+# ****************************************************
+# Execute the main function
+main "$@"
+# ****************************************************
+

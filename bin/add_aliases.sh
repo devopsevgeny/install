@@ -9,7 +9,6 @@
 #         
 set -o errexit
 set -o pipefail
-set -x
 # -----------------------------------------------------
 BASH_ALIASES=$HOME/.bash_aliases
 #Check if .bash_alias snippet already exists and add of needed.

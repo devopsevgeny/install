@@ -7,7 +7,7 @@
 # Description:    This script manages AWS CLI installation, update, and removal.
 set -o errexit
 set -o pipefail
-set -x
+
 # -----------------------------------------------------
 
 aws_cli() {

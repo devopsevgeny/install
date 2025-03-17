@@ -11,7 +11,6 @@
 
 set -o errexit
 set -o pipefail
-set -x
 
 BASHRC="$HOME/.bashrc"
 BACKUP="$HOME/.bashrc.backup"

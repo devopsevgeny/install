@@ -9,7 +9,7 @@
 #                 you think that this script can be improved.
 set -o errexit
 set -o pipefail
-set -x
+
 vimrcfile=$HOME/.vimrc
 vimrcderectory=$HOME/.vim
 
